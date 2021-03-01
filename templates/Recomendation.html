@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendation</title>
+</head>
+<body>
+    <div id="navbar">
+    {% load static %}
+    <img src= '{% static "IMAGE.jpg" %}' alt="My image">
+    <h1>CyberTrack</h1>
+    <img src= '{% static "IMAGE2.jpg" %}' alt="My image" id="Back">
+    <div id="nav">
+        <a href="Home.html" class="nav" id="nav-1">HOME</a>
+        <a href="" class="nav" id="nav-2">SERVICES</a>
+        <a href="" id="UserName">Hi {{UserName}}</a>
+    </div>
+    </div>
+    <div id="chatwithus">
+        {% load static %}
+        <img src= '{% static "Untitled-1.png" %}' alt="My image">
+        <a href="login.html"><h1>Chat With Us</h1></a>
+    </div>
+    <div id="Recomendations">
+    <div id="title">
+        <h1>Welcome CyberTrack's To Recomendations</h1>
+        <p>This is the recomendation page, Here You Will See CyberTrack's Recomendations,
+            Here You Can Also Add The Recomendations,please co-operate with us and you can add the comment 
+            below if you are create cybertrack account
+        </p>
+        <h1>Hi {{UserName}} Have A Awkward Day</h1>
+    </div>
+        <div id="Songs"></div>
+        <div id="Ytchannels"></div>
+        <div id="videos"></div>
+        <div id="sounds"></div>
+        <div id="editingsoftwares"></div>
+    </div>
+</body>
+<style>
+    #Addcomments {
+        text-decoration: none;
+        color: red;
+        font-size: 2em;
+    }
+    #UserName {
+        text-decoration: none;
+        font-size: 26px;
+        position: relative;
+        top: -11.5em;
+        left: 17em;
+        color: aqua;
+    }
+    #title {
+        text-align: center;
+        position: relative;
+        top: -17em;
+    }
+    * {
+        color: white;
+        font-family: permanent marker;
+    }
+    body {
+        background: black;
+        overflow-x: hidden;
+    }
+    #navbar h1 {
+        position: relative;
+        top: -3.5em;
+        left: 4em;
+        animation-name: text-color-changer;
+        animation-duration: 2s;
+        animation-direction: alternate-reverse;
+        animation-iteration-count: infinite;
+    }
+    @keyframes text-color-changer {
+        0% {
+            color: white;
+        }
+        100% {
+            color: red;
+        }
+    }
+    #navbar #Back {
+        position: relative;
+        top: -13.5em;
+        left: 20em;
+    }
+    .nav {
+        padding-left: 39px;
+        position: relative;
+        top: -11.5em;
+        left: 16em;
+        text-decoration: none;
+        font-size: 26px;
+        transition: 0.5s;
+    }
+    .nav:hover {
+        color: red;
+    }
+    #chatwithus img{
+        transform: scale(0.156);
+        position: relative;
+        top: -21.5em;
+        left: -37em;
+
+    }
+    #chatwithus {
+        border: 2px solid aqua;
+        height: 4em;
+        width: 21em;
+        border-radius: 6em;
+        position: fixed;
+        top: 36em;
+        left: 62em;
+        transform: scale(0.8);
+        z-index: 5;
+    }
+    #chatwithus a h1 {
+        font-family: ubuntu;
+        position: relative;
+        top: -24.4em;
+        left: 3.5em;
+        text-decoration: none;
+    }
+
+</style>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Res</title>
+</head>
+<body>
+    <!-- {{City_Name}}
+         {{timezone}} 
+         {{desc}}
+        {{humidity}}
+        {{min}}
+        {{max}}-->
+    <h1 id="City">{{City_Name}}</h1>
+    <h1 class="temp" id="temp">{{timezone}}</h1>
+    <div id="mm">
+        <h1 id="max" class="mxn">Max: {{max}}</h1>
+        <h1 id="min" class="mxn">Min: {{min}}</h1>
+</div>
+    <h1 class="temp" id="Mostly">{{desc}}</h1>
+    <div id="content">
+    <h1 class="h">Humidity: {{humidity}}%</h1>    
+    <h1 class="h">Pressure: {{pressure}} mb</h1>
+    <a href="Home.html" id="Close">
+        <div class="arrow" id="arrow-1"></div>
+        <div class="arrow" id="arrow-2"></div>
+    </a>
+</div>    
+<h1 id="wind">Wind: {{wind}}m/h</h1>
+    <h1>{{msg}}</h1>
+</body>
+<style>
+    #wind {
+        position: relative;
+        text-align: center;
+        top: -9em;
+        font-weight: inherit;
+    }
+    .mxn {
+        padding-left: 20px;
+        font-size: 20px;
+        font-weight: lighter;
+        position: relative;
+        top: -10em;
+        left: 28.5em;
+    }
+    #mm {
+        display: flex;
+    }
+    #Close {
+        height: 61px;
+        position: relative;
+        top: -25.5em;
+        left: 24em;
+        transform: scale(0.8);
+        transition: 0.5s;
+    }
+    #Close:hover {
+        background: red;
+    }
+    .arrow {
+        position: relative;
+    }
+    #arrow-1 {
+        height: 0px;
+        width: 63px;
+        border: 2px solid white;
+        transform: rotate(-45deg);
+        position: relative;
+        top: 28px;
+    }
+    #arrow-2 {
+        height: 0px;
+        width: 63px;
+        border: 2px solid white;
+        transform: rotate(44deg);
+        top: 24px;
+    }
+    #content {
+        display: flex;
+        justify-content: center;
+        position: sticky;
+    }
+    .h {
+        padding-left: 18px;
+        position: relative;
+        top: -8em;
+        left: 1em;
+    }
+    #Mostly {
+        position: relative;
+        top: -7em;
+        text-transform: capitalize;
+    }
+    #temp {
+        font-size: 106px;
+        position: relative;
+        top: -1em;
+    }
+    .temp {
+        text-align: center;
+    }
+    body {
+        background: black;
+    }
+    * {
+        color: white;
+        font-family: ubuntu;
+    }
+    #City {
+        text-transform: capitalize;
+        font-family: ubuntu;
+        border-bottom: 2px solid white;
+        text-align: center;
+        font-size: 40px;
+        position: relative;
+        top: -20px;
+        padding-bottom: 10px;
+    }
+
+</style>
+</html>

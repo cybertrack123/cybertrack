@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+</head>
+<body>
+    <form action="Greetings.html" method="POST">
+        {% csrf_token %}
+        <div id="signin">
+            <label for="User Name" class="Sign" id="name">Name</label>
+            <input type="text" name="User Name" class="Ad" id="n">
+            <label for="Email" class="Sign">Add Your Email Adress Here</label>
+            <input type="email" name="Email" class="Ad" id="e">
+            <label for="Pass" class="Sign" id="p">Add Your PassWord Here</label>
+            <input type="password" name="Pass" class="Ad" id="pas">
+            <button type="submit">Submit Here</button>
+    </div>
+    </form>
+</body>
+<style>
+    body {
+        background: black;
+        overflow-x: hidden;
+    }
+    * {
+        color: white;
+    }
+    #signin {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        left: 15em;
+        top: 3em;
+    }
+    .Ad {
+        height: 20px;
+        width: 42em;
+        padding: 8px;
+        font-size: 20px;
+        background: black;
+    }
+    .Sign {
+        position: relative;
+        font-family: ubuntu;
+        top: 9px;
+        left: 5px;
+        font-size: 13px;
+        background: black;
+        width: 178px;
+        padding-left: 4px;
+        border: 2px solid white;
+        border: 2px solid transparent;
+    }
+    #name {
+        width: 36px;
+        padding-left: 3px;
+        padding-right: 4px;
+    }
+    #p {
+        width: 161px;
+    }
+    #signin button {
+        height: 2em;
+        width: 7em;
+        border-radius: 21px;
+        position: relative;
+        top: 11px;
+        background: transparent;
+        border: 2px solid green;
+        left: 16em;
+        font-size: 20px;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    #signin button:hover {
+        background: green;
+        color: black;
+        border: 2px solid black;
+    }
+    #n {
+        border: 2px solid red;
+    }
+    #pas {
+        border: 2px solid yellow;
+    }
+    #e {
+        border: 2px solid aqua;
+    }
+</style>
+</html>

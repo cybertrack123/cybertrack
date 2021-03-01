@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email-Sender</title>
+    <!--  -->
+    <!--  -->
+</head>
+<body>
+    <h1 id="message">In this version you can send only text messages not files,If you want to send the files then wait for newer version</h1>
+    <form action="EmailRes.html" method="POST">
+        {% csrf_token %}
+        <div id="signin">
+            <label for="email_name" class="Sign" id="name">Email Adress</label>
+            <input type="text" name="email_name" class="Ad" id="n">
+
+            <label for="email_sender" class="Sign" id="p">Text Message</label>
+            <input type="text" name="email_sender" class="Ad" id="pas">
+
+            <button type="submit">Submit Here</button>
+    </div>
+    </form>
+</body>
+<style>
+    #message {
+        font-family: ubuntu;
+        text-align: center;
+        font-size: 26px;
+    }
+    body {
+        background: black;
+        overflow-x: hidden;
+    }
+    * {
+        color: white;
+    }
+    #signin {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        left: 15em;
+        top: 3em;
+    }
+    .Ad {
+        height: 20px;
+        width: 42em;
+        padding: 8px;
+        font-size: 20px;
+        background: black;
+    }
+    .Sign {
+        position: relative;
+        font-family: ubuntu;
+        top: 9px;
+        left: 5px;
+        font-size: 13px;
+        background: black;
+        width: 178px;
+        padding-left: 4px;
+        border: 2px solid white;
+        border: 2px solid transparent;
+    }
+    #name {
+        width: 77px;
+        padding-left: 3px;
+        padding-right: 4px;
+    }
+    #p {
+        width: 84px;
+    }
+    #signin button {
+        height: 2em;
+        width: 7em;
+        border-radius: 21px;
+        position: relative;
+        top: 11px;
+        background: transparent;
+        border: 2px solid green;
+        left: 16em;
+        font-size: 20px;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    #signin button:hover {
+        background: green;
+        color: black;
+        border: 2px solid black;
+    }
+    #n {
+        border: 2px solid red;
+    }
+    #pas {
+        border: 2px solid yellow;
+    }
+    #e {
+        border: 2px solid aqua;
+    }
+</style>
+
+</html>
